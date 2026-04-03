@@ -1,0 +1,42 @@
+[project]
+name = "optitune-llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ruff>=0.15.9",
+]
+
+
+[tool.ruff]
+line-length = 200
+
+[tool.ruff.format]
+docstring-code-format = true
+quote-style = "double"
+exclude = ["**/__init__.py"]
+
+[tool.ruff.lint]
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle
+    "W", # pycodestyle warnings
+    "I", # isort
+    "D", # pydocstyle
+    "N", # pep8-naming
+]
+exclude = ["**/__init__.py"]
+ignore = [
+    "D100", # undocumented-public-module
+    "D107", # undocumented-public-init
+    "D205", # blank-line-after-summary
+    "D415", # ends-in-punctuation
+    "E501", # Line too long
+    "F403", # unable to detect undefined names
+    "F405"  # undefined, or defined from star imports
+]
+
+[tool.ruff.lint.pydocstyle]
+# docstringはgoogle style
+convention = "google"
