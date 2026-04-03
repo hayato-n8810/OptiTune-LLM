@@ -12,7 +12,7 @@ repos:
         language: python
         types_or: [python, pyi]
         # --fix: enable lint fixes
-        args: [--fix, --select, I]
+        args: [--fix]
         require_serial: true
         additional_dependencies: []
         minimum_pre_commit_version: "4.2"
